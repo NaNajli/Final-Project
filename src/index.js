@@ -7,7 +7,7 @@ const baseURL = 'https://gateway.marvel.com/v1/public/comics?ts=1&apikey=b86e0df
 fetch(baseURL)
   .then(response => response.json())
   .then(data => console.log(data));
-  for (const character of json.data.results) {
-    let herourl = character.urls[0].url;
-  }
+//  for (const character of json.data.results) {
+//    let herourl = character.urls[0].url;
+//  }
   
