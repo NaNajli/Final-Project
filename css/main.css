@@ -24,4 +24,12 @@ ul.breadcrumb {
         color:white;
         width: 16%;
         text-align: center;}
+
+/* cards */
+
+.characters{
+  display: flex;
+  flex-direction: row;}   
+.list-characters img {width: 30vw;
+height: auto;}       
   
