@@ -1,35 +1,52 @@
 /* Breadcrumb */
 ul.breadcrumb {
-    padding: 10px 16px;
-    list-style: none;
-  }
-  ul.breadcrumb li {
-    display: inline;
-    font-size: 15px;
-  }
-  ul.breadcrumb li + li:before {
-    padding: 8px;
-    color: rgb(117, 117, 121);
-    content: '>';
-  }
-  ul.breadcrumb li a {
-    color: #0A100D;
-    text-decoration: none;
-  }
-  ul.breadcrumb li a:hover {
-    color: #902923;
-  }
+  padding: 10px 16px;
+  list-style: none;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 15px;
+}
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: rgb(117, 117, 121);
+  content: ">";
+}
+ul.breadcrumb li a {
+  color: #0a100d;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #902923;
+}
 
-  .root{background-color: #A22C29;
-        color:white;
-        width: 16%;
-        text-align: center;}
+.root {
+  background-color: #a22c29;
+  color: white;
+  width: 16%;
+  text-align: center;
+}
 
 /* cards */
 
-.characters{
+.characters {
   display: flex;
-  flex-direction: row;}   
-.list-characters img {width: 30vw;
-height: auto;}       
-  
+  flex-direction: row;
+}
+.list-characters img {
+  width: 50vw;
+  height: auto;
+}
+
+
+@media screen and (min-width: 500px) {
+  body {
+    max-width: 1080px;
+    margin: auto;
+  }
+
+  .list-characters img {
+    width: 30vw;
+    height: auto;
+  }
+}
