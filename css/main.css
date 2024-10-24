@@ -29,13 +29,23 @@ ul.breadcrumb li a:hover {
 
 /* cards */
 
-.characters {
+.list-characters {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .list-characters img {
   width: 50vw;
   height: auto;
+}
+
+/* search  */
+
+#search-form button{
+  background-color: #a22c29;
+  color: white;
+  margin-right: 10px;
+
+ 
 }
 
 
@@ -48,5 +58,14 @@ ul.breadcrumb li a:hover {
   .list-characters img {
     width: 30vw;
     height: auto;
+  }
+
+  .list-characters {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 25px;
   }
 }
