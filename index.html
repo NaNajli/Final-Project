@@ -4,33 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link media="screen" rel="stylesheet" href="css/main.css" />
+    <link media="screen" rel="stylesheet" href="./css/main.css" />
     <script type="module" src="src/index.js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="root"></div>
+    <header id="main-footer">
+      <div class="root"></div>
+       <nav class="container">
         <form id="search-form">
-          <input
-            type="text"
-            id="search-input"
-            placeholder="Search ..."
-            aria-label="Search"
-          />
-          <button type="submit">Search</button>
-        </form>
-      </nav>
-      
+        <input
+          type="text"
+          id="search-input"
+          placeholder=" Search for letter.."
+          aria-label="Search"
+          pattern="[A-Za-z]"
+          maxlength="1" 
+        />
+        <button type="submit">SEARCH</button>
+      </form>
+    </nav>
     </header>
     <main>
       <ul class="breadcrumb">
-        <li><a href="">Characters</a></li>
-        <li><a href="">Events</a></li>
+        <li><a class="page1" href="#/page1"> Home</a></li>
+        <li><a class="page2" href="./src/events/events.html">Events</a></li>
       </ul>
       <div class="characters"></div>
       <ul class="list-characters"></ul>
     </main>
-    <footer></footer>
+    <footer id=""></footer>
   </body>
 </html>
