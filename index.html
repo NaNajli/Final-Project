@@ -10,17 +10,19 @@
   <body>
     <header id="main-footer">
       <div class="root"></div>
-      <nav>
+       <nav class="container">
         <form id="search-form">
-          <input
-            type="text"
-            id="search-input"
-            placeholder="Search ..."
-            aria-label="Search"
-          />
-          <button type="submit">Search</button>
-        </form>
-      </nav>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for letter.."
+          aria-label="Search"
+          pattern="[A-Za-z]"
+          maxlength="1" 
+        />
+        <button type="submit">SEARCH</button>
+      </form>
+    </nav>
     </header>
     <main>
       <ul class="breadcrumb">

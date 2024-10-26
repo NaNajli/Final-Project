@@ -1,18 +1,36 @@
+import { searching,compareAndReplace } from "./search";
 export function characters() {
-  //const baseURL = 'https://gateway.marvel.com/v1/public/comics?ts=1&apikey=b86e0dfc7ac1699752f05c1269c1234e&hash=0b50b7f09f080dcf97546c4e1f97b5b7'
-  const search = "l"
-  const baseURL =`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${search}&ts=1&apikey=b86e0dfc7ac1699752f05c1269c1234e&hash=0b50b7f09f080dcf97546c4e1f97b5b7`;
+
+ // const url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=d&ts=1&apikey=b86e0dfc7ac1699752f05c1269c1234e&hash=0b50b7f09f080dcf97546c4e1f97b5b7`
 
   const myList = document.querySelector(".list-characters");
   const title = document.querySelector(".characters");
-
   title.appendChild(document.createElement("h1")).textContent = `Characters`;
 
-  const myRequest = new Request(baseURL);
+  let myRequest
+  let letter = "t"
+  searching()
+  compareAndReplace(myRequest).then((newText) => {
+    console.log("Texto modificado:", newText);
+});
 
-  fetch(myRequest)
-    .then((response) => response.json())
-    .then((data) => {
+
+  if (letter !== "")
+    {
+     
+    myRequest =  `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${letter}&ts=1&apikey=b86e0dfc7ac1699752f05c1269c1234e&hash=0b50b7f09f080dcf97546c4e1f97b5b7` ;
+  
+       
+    }
+
+  else{
+      // myRequest= new Request(url)  
+   myRequest = `https://gateway.marvel.com:443/v1/public/characters?&ts=1&apikey=b86e0dfc7ac1699752f05c1269c1234e&hash=0b50b7f09f080dcf97546c4e1f97b5b7`
+      }   
+      
+      fetch(myRequest)
+      .then((response) => response.json())
+      .then((data) => {
       console.log(data);
 
       for (const charact of data.data.results) {
@@ -27,4 +45,4 @@ export function characters() {
       }
     })
     .catch(console.error);
-}
+      }  

@@ -1,4 +1,3 @@
-import { events } from "./events";
 
 function logo() {
   const p = document.createElement("p");
@@ -12,5 +11,5 @@ function footer() {
 }
 
 export function app() {
-  return logo(), footer() , events();
+  return logo(), footer()
 }
