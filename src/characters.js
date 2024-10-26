@@ -1,4 +1,4 @@
-import { searching,compareAndReplace } from "./search";
+
 export function characters() {
 
  // const url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=d&ts=1&apikey=b86e0dfc7ac1699752f05c1269c1234e&hash=0b50b7f09f080dcf97546c4e1f97b5b7`
@@ -8,24 +8,18 @@ export function characters() {
   title.appendChild(document.createElement("h1")).textContent = `Characters`;
 
   let myRequest
-  let letter = "s"
-  searching()
-  compareAndReplace(myRequest).then((newText) => {
-    console.log("Texto modificado:", newText);
+  let letter = "r"
+
   
-});
-
-
+  
   if (letter !== "")
     {
    
     myRequest =  `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${letter}&ts=1&apikey=b86e0dfc7ac1699752f05c1269c1234e&hash=0b50b7f09f080dcf97546c4e1f97b5b7` ;
-  
-       
+   
     }
-
-  else{
-      // myRequest= new Request(url)  
+ else if (letter === ""){
+    
    myRequest = `https://gateway.marvel.com:443/v1/public/characters?&ts=1&apikey=b86e0dfc7ac1699752f05c1269c1234e&hash=0b50b7f09f080dcf97546c4e1f97b5b7`
       }   
       
@@ -37,7 +31,9 @@ export function characters() {
       for (const charact of data.data.results) {
         const listItem = document.createElement("li");
         listItem.appendChild(document.createElement("h2")).textContent =
-          charact.name;
+        charact.name;
+        listItem.appendChild(document.createElement("p")).textContent =
+        charact.description;
         listItem.append(``);
         let urlImg = `${charact.thumbnail.path}.${charact.thumbnail.extension}`;
         listItem.appendChild(document.createElement("img")).src =
@@ -47,3 +43,4 @@ export function characters() {
     })
     .catch(console.error);
       }  
+    

@@ -1,4 +1,4 @@
-
+import { events } from "./events";
 function logo() {
   const p = document.createElement("p");
   const newmesa = document.querySelector(".root").appendChild(p);
@@ -11,5 +11,5 @@ function footer() {
 }
 
 export function app() {
-  return logo(), footer()
+  return logo(), footer(), events();
 }

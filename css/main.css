@@ -47,6 +47,10 @@ ul.breadcrumb li a:hover {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  background-image: none;
+  background-color: white;
+ 
+  
   
    
 }
@@ -59,11 +63,14 @@ ul.breadcrumb li a:hover {
 }
 
 .list-characters li{
-  color:#d6d5c9;
+  color:#902923;
   list-style-type: none;
   text-align: center;
-  background-color: black;
+ background-color: white;
+
   }
+
+  .list-characters p{text-align: center;}
 /* nav */
 .container{
   display: flex;
@@ -102,13 +109,17 @@ ul.breadcrumb li a:hover {
 
 
 }
-.event-description p{clear: left;}
+.event-description p{
+  clear: left;}
 
-.event-description{text-align: center;
+
+.event-description{
+  text-align: center;
   list-style-type: none;
   font-size: large;
   align-items: center;
 }
+
 
 /* title */
 
@@ -116,7 +127,11 @@ ul.breadcrumb li a:hover {
 text-align: center;
 font-family: Bangers;}
 
- 
+.events{text-align: center;}
+
+ /* footer */
+
+ footer{text-align: center;}
 
 @media screen and (min-width: 500px) {
   body {
@@ -136,6 +151,11 @@ font-family: Bangers;}
     justify-content: space-around;
     align-items: center;
     row-gap: 25px;
+    background-image: url('../public/images/Diseño\ sin\ título.png');
+    background-repeat:inherit;
+    background-color: black;
+   
+ 
   }
   .characters{font-size: x-large;
     text-align: center;
@@ -152,7 +172,8 @@ font-family: Bangers;}
 
 }
 
-.event-description{text-align: center;
+.event-description{
+  text-align: center;
   list-style-type: none;
   font-size: large;
   align-items: center;
