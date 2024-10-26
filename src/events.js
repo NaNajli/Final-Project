@@ -13,12 +13,10 @@ const myList = document.querySelector(".event-description");
 for (const items of data.data.results) {
 
   const listItem = document.createElement("li");
-  listItem.appendChild(document.createElement("p")).textContent =
-  items.start;
-  listItem.appendChild(document.createElement("p")).textContent =
-  items.end;
+  listItem.appendChild(document.createElement("p")).textContent = items.start.replace("00:00:00","")
+  listItem.appendChild(document.createElement("p")).textContent = items.end.replace("00:00:00","")
   listItem.append(`${items.description}`);
-  listItem.append(`${items.title}`)
+  myList.append(`${items.title}`)
   let urlImg = `${items.thumbnail.path}.${items.thumbnail.extension}`;
   listItem.appendChild(document.createElement("img")).src = urlImg.replace("http", "https");
   myList.appendChild(listItem);
