@@ -242,7 +242,7 @@ font-family: Bangers;
 .event-description{
   text-align: center;
   list-style-type: none;
-  font-size: large;
+  font-size: 2rem;
   align-items: center;
 }
 
