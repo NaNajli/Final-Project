@@ -1,21 +1,26 @@
+export function searching()
+{
+    return new Promise((resolve)=>
+        {
+            document.getElementById("search-form").addEventListener("submit", function(event) {
+             event.preventDefault();
+             let searching = event.target.input.value;
+             console.log(searching);
+             resolve(searching);
+            }
+    )}
 
- export function searching(){
-   
-  return new Promise((resolve) => {
-    document.getElementById("search-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-        let searching = document.getElementById("search-input").value;
-        console.log(searching);
-        resolve(searching);
-    });
-});
-}
+)}
 
-export async function compareAndReplace(letter) {
+export async function replace(letter){
     let searchWord = await searching();
-    let newText = letter.replace(searchWord, "letter");
-    console.log(newText);
-    newText.use
-
-    return newText;
+    const urlParams = new urlParams(searchWord)
+    const urlParam = searchWord.get(letter)
+    urlParam.use
+    console.log(urlParam)
+    return  urlParam
+    
 }
+
+
+

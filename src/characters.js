@@ -1,28 +1,28 @@
 
 export function characters() {
 
- // const url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=d&ts=1&apikey=b86e0dfc7ac1699752f05c1269c1234e&hash=0b50b7f09f080dcf97546c4e1f97b5b7`
-
   const myList = document.querySelector(".list-characters");
   const title = document.querySelector(".characters");
   title.appendChild(document.createElement("h1")).textContent = `Characters`;
 
-  let myRequest
-  let letter = "a"
-
+ 
+  document.getElementById("search-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  let letter = event.target.input.value;
   
+  let myRequest;
   
   if (letter !== "")
     {
-   
+
     myRequest =  `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${letter}&ts=1&apikey=b86e0dfc7ac1699752f05c1269c1234e&hash=0b50b7f09f080dcf97546c4e1f97b5b7` ;
+     
+    } 
+ else if (letter === "" ) {
    
-    }
- else if (letter === ""){
-    
    myRequest = `https://gateway.marvel.com:443/v1/public/characters?&ts=1&apikey=b86e0dfc7ac1699752f05c1269c1234e&hash=0b50b7f09f080dcf97546c4e1f97b5b7`
       }   
-      
+   
       fetch(myRequest)
       .then((response) => response.json())
       .then((data) => {
@@ -43,4 +43,5 @@ export function characters() {
     })
     .catch(console.error);
       }  
+  )}  
     
