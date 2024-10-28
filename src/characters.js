@@ -8,7 +8,8 @@ export function characters() {
  
   document.getElementById("search-form").addEventListener("submit", function(event) {
   event.preventDefault();
-  let letter = event.target.input.value;
+  let letter = event.target.input.value
+  console.clear()
   
   let myRequest;
   
