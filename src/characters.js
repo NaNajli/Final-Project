@@ -8,7 +8,7 @@ export function characters() {
   title.appendChild(document.createElement("h1")).textContent = `Characters`;
 
   let myRequest
-  let letter = "r"
+  let letter = "a"
 
   
   
