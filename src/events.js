@@ -23,6 +23,8 @@ for (const items of data.data.results) {
   dateEnd.textContent = ` End: ${items.end.replace("00:00:00","")}`
   let description = listItem.appendChild(document.createElement("p"))
   description.textContent = `Description ${items.description}`
+  description.className = "descriptionE ";
+
   
   
   myList.appendChild(listItem);
