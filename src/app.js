@@ -1,4 +1,7 @@
 import { events } from "./events";
+import { drawCanvas } from "./canvas";
+
+
 function logo() {
   const p = document.createElement("p");
   const newmesa = document.querySelector(".root").appendChild(p);
@@ -11,5 +14,5 @@ function footer() {
 }
 
 export function app() {
-  return logo(), footer(), events();
+  return logo(), drawCanvas()  , footer(), events();
 }

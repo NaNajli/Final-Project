@@ -2,7 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* canvas  */
 
+#canvas {
+  /* border: 1px solid rgb(20, 23, 22); */
+  margin-left:50px;
+  width: 10%;
+  
+}
 /* Breadcrumb */
 
 ul.breadcrumb {
@@ -66,7 +73,7 @@ ul.breadcrumb li a:hover {
   color:#902923;
   list-style-type: none;
   text-align: center;
- background-color: white;
+  background-color: white;
 
   }
 
@@ -177,6 +184,13 @@ font-family: Bangers;}
   list-style-type: none;
   font-size: large;
   align-items: center;
+}
+
+/* canvas */
+
+#canvas {
+  /* border: 1px solid rgb(20, 23, 22); */
+   margin-left: 800px; 
 }
     
 }
